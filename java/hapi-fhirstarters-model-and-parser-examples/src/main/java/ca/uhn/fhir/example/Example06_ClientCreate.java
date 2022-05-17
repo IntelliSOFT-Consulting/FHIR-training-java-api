@@ -10,8 +10,8 @@ public class Example06_ClientCreate {
    public static void main(String[] theArgs) {
 
       Patient pat = new Patient();
-      pat.addName().setFamily("Simpson").addGiven("Homer").addGiven("J");
-      pat.addIdentifier().setSystem("http://acme.org/MRNs").setValue("7000135");
+      pat.addName().setFamily("Simpson-test").addGiven("Homer").addGiven("Jtest");
+      pat.addIdentifier().setSystem("http://fhir-training/example").setValue("fhir-training-id");
       pat.setGender(AdministrativeGender.MALE);
 
       // Create a context
@@ -29,5 +29,9 @@ public class Example06_ClientCreate {
 
       // Print the ID of the newly created resource
       System.out.println(outcome.getId());
+      System.out.println("........................");
+      System.out.println(ctx.newJsonParser().setPrettyPrint(true).encodeResourceToString(outcome.getResource()));
+      //System.out.println(fhirContext.newXmlParser().setPrettyPrint(true).encodeResourceToString(pat));
+      System.out.println("........................");
    }
 }

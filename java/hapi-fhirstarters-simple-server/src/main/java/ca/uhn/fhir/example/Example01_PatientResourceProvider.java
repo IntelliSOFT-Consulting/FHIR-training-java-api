@@ -23,7 +23,13 @@ public class Example01_PatientResourceProvider implements IResourceProvider {
       pat1.setId("1");
       pat1.addIdentifier().setSystem("http://acme.com/MRNs").setValue("7000135");
       pat1.addName().setFamily("Simpson").addGiven("Homer").addGiven("J");
+
+      Patient pat2 = new Patient();
+      pat2.setId("2");
+      pat2.addIdentifier().setSystem("http://acme.com/MRNs").setValue("7000135");
+      pat2.addName().setFamily("Simpson").addGiven("Homer").addGiven("J");
       myPatients.put("1", pat1);
+      myPatients.put("2", pat2);
    }
 
    @Override
