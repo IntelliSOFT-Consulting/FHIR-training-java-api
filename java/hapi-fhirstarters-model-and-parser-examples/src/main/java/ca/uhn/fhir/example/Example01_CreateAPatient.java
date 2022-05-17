@@ -52,6 +52,7 @@ public class Example01_CreateAPatient {
       pat.addIdentifier().setValue("MOHTest").setSystem("MOHTest");
       pat.addName().addGiven(" first given Name").addGiven(" second given Name").setFamily("family name");
       
+      //pat.addExtension().setUrl("htp//politicalparty").setValue(theValue);
       pat.setGender(AdministrativeGender.FEMALE);
       FhirContext fhirContext = FhirContext.forR4();
       System.out.println("........................");
