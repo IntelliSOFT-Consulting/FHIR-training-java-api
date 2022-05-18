@@ -15,3 +15,5 @@ services:
             # - hapi.fhir.partitioning.enabled=true
             # - hapi.fhir.partitioning.allow_references_across_partitions=false
             # - hapi.fhir.partitioning.partitioning_include_in_search_hashes=false
+            #  - hapi.fhir.fhir_version=R4
+            #    DSTU2, DSTU3, R4 or R5
